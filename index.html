@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Registration and Staff Login</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+
+      .button {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 10px;
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+      }
+
+      .student-registration {
+        background-color: #4caf50;
+        color: white;
+      }
+
+      .staff-login {
+        background-color: #f44336;
+        color: white;
+      }
+
+      /* Style for the loading screen */
+      #loading-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(0, 0, 0); /* semi-transparent white background */
+        z-index: 9999; /* ensure the loading screen stays on top */
+        display: none; /* hide initially */
+      }
+
+      #loading-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+      @media only screen and (max-width: 600px) {
+        button {
+          width: 50%;
+        }
+        #logo {
+          width: 450px;
+        }
+        #loading-content {
+          width: 80%;
+          margin: 0 auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Loading screen with logo and name -->
+    <div id="loading-screen">
+      <div id="loading-content">
+        <img src="scit.png" alt="Loading Logo" />
+        <!-- Replace 'loading_logo.gif' with your loading animation -->
+        <h2 style="color: #f44336">
+          SREE CHAITANYA INSTITUTE OF TECHNOLOGICAL SCIENCES
+        </h2>
+      </div>
+    </div>
+
+    <nav>
+      <img src="logo.png" id="logo" alt="" srcset="" />
+    </nav>
+    <h1>Welcome to Student Registration and Staff Login</h1>
+
+    <button
+      class="button staff-login"
+      onclick="showLoading('staff_login.php');"
+    >
+      Staff Login</button
+    ><br />
+
+    <button
+      class="button student-registration"
+      onclick="showLoading('student_registartion.php');"
+    >
+      Student End Exam Registration</button
+    ><br />
+
+    <!-- JavaScript to show/hide the loading screen -->
+    <script>
+      function showLoading(url) {
+        document.getElementById("loading-screen").style.display = "block";
+        setTimeout(function () {
+          window.location.href = url;
+        }, 1000); // Adjust the timeout as needed
+      }
+
+      window.addEventListener("pageshow", function (event) {
+        // Check if the page is loaded from the cache
+        if (event.persisted) {
+          document.getElementById("loading-screen").style.display = "none";
+        } else {
+          document.getElementById("loading-screen").style.display = "none";
+        }
+      });
+
+      // Keep track of the previous page
+      var previousPage = document.referrer;
+
+      // Function to return to the previous page with a loading screen
+      function returnToPreviousPageWithLoading() {
+        document.getElementById("loading-screen").style.display = "block";
+        setTimeout(function () {
+          window.location.href = previousPage;
+        }, 1000); // Adjust the timeout as needed
+      }
+    </script>
+  </body>
+</html>

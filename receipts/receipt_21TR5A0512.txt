@@ -1,0 +1,18 @@
+Receipt for Hall Ticket Number: 21TR5A0512
+Name: HGFD
+Total Amount: 800
+Semester Information:
+Semester: 1, Type: Regular
+Subject Names: GF
+Lab Names: HFGDF
+Number of Subjects: 5
+Number of Labs: 1
+Amount: 800, Fine: 0
+
+Semester: 2, Type: Regular
+Subject Names: BDFV
+Lab Names: BFS
+Number of Subjects: 1
+Number of Labs: 1
+Amount: 800, Fine: 0
+

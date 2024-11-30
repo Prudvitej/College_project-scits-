@@ -1,0 +1,5 @@
+How to make a php website live
+open file location in search bar type cmd and 
+-php -S localhost:1234(potnumber)
+open cmd in administrative mode then type
+-lt --port 1234

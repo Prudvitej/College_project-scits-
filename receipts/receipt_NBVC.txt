@@ -1,0 +1,14 @@
+Receipt for Hall Ticket Number: NBVC
+Name: hgfd
+Total Amount: 13521
+Semester Information:
+Semester: 2, Type: Regular
+Subject Names: oiuyt
+Lab Names: oiuy
+Number of Subjects: 8
+Number of Labs: 8
+Semester: 1, Type: Regular
+Subject Names: uynhtg
+Lab Names: uytg
+Number of Subjects: 8
+Number of Labs: 2
